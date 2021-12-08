@@ -7,8 +7,7 @@ RUN crond
 RUN apk add git 
 RUN git clone  ${GIT_REPO:0:8}${USER}:${PASSWORD}@${GIT_REPO:8} /usr/src/mynote  
 RUN chmod +x /usr/src/mynote/sync.sh \
-    && echo "* * * * * ./usr/src/mynote/sync.sh" >> /var/spool/cron/crontabs/root \
-    && crond 
+    && echo "0 * * * * ./usr/src/mynote/sync.sh" >> /var/spool/cron/crontabs/root \ 
 WORKDIR /usr/src/mynote
+CMD [ "crond " ]
 ENTRYPOINT [ "init" ]
-
