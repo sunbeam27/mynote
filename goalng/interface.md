@@ -129,3 +129,6 @@ https://golang.org/doc/asm
 知乎文章：
 
 https://zhuanlan.zhihu.com/p/76354559
+
+
+https://halfrost.com/go_interface/
